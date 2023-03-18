@@ -1,21 +1,14 @@
 package org.example;
-import javax.xml.transform.Source;
-import java.sql.Time;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 
 public class Task {
     private static int counter = 0;
     private int id = counter;
-    private final Date dateTimeCreate = new Date();
-    private final SimpleDateFormat formatDateCreate = new SimpleDateFormat("dd.MM.yyy");
-    private final SimpleDateFormat formatTimeCreate = new SimpleDateFormat("HH:mm:ss");
+    private final LocalDate dateCreate = LocalDate.now();
+    private final LocalTime timeCreate = LocalTime.now();
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private LocalDate deadLine;
     private Person author;
@@ -29,10 +22,7 @@ public class Task {
         this.id = ++counter;
         this.deadLine = LocalDate.parse(deadLine, formatter);
 
-
-
     }
-
     public int getId() {
         return id;
     }
@@ -57,20 +47,13 @@ public class Task {
         this.description = description;
     }
 
-    public SimpleDateFormat getFormatDateCreate() {
-        return formatDateCreate;
+    public LocalDate getDateCreate() {
+        return dateCreate;
     }
-
-    public SimpleDateFormat getFormatTimeCreate() {
-        return formatTimeCreate;
-    }
-
-    public Date getDateTimeCreate() {
-        return dateTimeCreate;
-    }
-
     public LocalDate getDeadLine() {
         return deadLine;
-
+    }
+    public LocalTime getTimeCreate() {
+        return timeCreate;
     }
 }

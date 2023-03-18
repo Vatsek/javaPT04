@@ -15,9 +15,9 @@ public class Node {
     public String toString() {
         return "id: " + task.getId()
                 + "| Автор: " + task.getAuthor()
-                + "| Дата создания: " + task.getFormatDateCreate().format(task.getDateTimeCreate())
-                + "| Время создания: " + task.getFormatTimeCreate().format(task.getDateTimeCreate())
-                + "| Дедлайн: " + task.getFormatDateCreate().format(task.getDeadLine()) + task.getFormatTimeCreate().format(task.getDeadLine())
+                + "| Дата создания: " + task.getDateCreate().getDayOfMonth() + " " + task.getDateCreate().getMonth() + " " + task.getDateCreate().getYear()
+                + "| Время создания: " + task.getTimeCreate().getHour() + ":" + task.getTimeCreate().getMinute()
+                + "| Дедлайн: " + task.getDeadLine().getDayOfMonth() + " " + task.getDeadLine().getMonth() + " " + task.getDeadLine().getYear()
                 + "| описание: " + task.getDescription()
                 +"| приоритет: " + this.priority ;
     }

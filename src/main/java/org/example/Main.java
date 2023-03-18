@@ -20,7 +20,7 @@ public class Main {
         sch1.append(t2, p2, Priority.low);
         sch1.append(t3, p2, Priority.middle);
         sch1.append(t4, p1, Priority.high);
-        sch1.showAllTasks();
+//        sch1.showAllTasks();
 
 //        sch1.findByValue("погулять");
 //        sch1.findByValue(Priority.high);
