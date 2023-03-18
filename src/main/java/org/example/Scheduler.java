@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Scheduler<E> {
 
-
     public ArrayList<Node> scheduler = new ArrayList<>();
 
     public ArrayList<Node> getScheduler() {

@@ -11,6 +11,10 @@ public class Node {
         this.priority = priority;
     }
 
+    public Task getTask() {
+        return task;
+    }
+
     @Override
     public String toString() {
         return "id: " + task.getId()
