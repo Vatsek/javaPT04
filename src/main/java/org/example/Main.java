@@ -38,7 +38,5 @@ public class Main {
         System.out.println("-".repeat(20));
         sch1.findByValue(3);
         System.out.println("-".repeat(20));
-
-
     }
 }
